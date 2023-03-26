@@ -1,0 +1,76 @@
+JQuery là một thư viện JavaScript gọn nhẹ. Mục đích của jQuery là giúp sử dụng JavaScript dễ dàng hơn trên trang web
+
+Thư viện jQuery chứa các tính năng sau đây:
+
+Điều khiển HTML/DOM
+Điều khiển CSS
+Các phương thức sự kiện HTML
+Các hiệu ứng và hoạt hình (animation)
+AJAX
+Các tiện ích
+Ngoài ra, jQuery có các plugin cho hầu hết bất kỳ công việc nào
+
+jQuery sẽ chạy chính xác như nhau trên tất cả các trình duyệt phổ biến
+
+Nhúng jQuery vào trong <head>từ một CDN (Content Delivery Network - Mạng lưới Phân phối Nội dung)
+Google CDN:
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</head>
+Microsoft CDN:
+<head>
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.3.min.js"></script>
+</head>
+
+Các selector trong jQuery cho phép chọn và thao tác với các phần tử HTML
+Selector dựa trên các CSS Selector hiện tại, và thêm vào một số selector tùy chỉnh riêng
+Selector phần tử
+$("p")
+Selector #id
+$("#test")
+Selector .class
+$(".test")
+
+Để tham khảo đầy đủ về tất cả các selector trong jQuery, xem tại trang https://www.w3schools.com/jquery/jquery_ref_selectors.asp
+
+Cú pháp cơ bản $(selector).action()
+
+tất cả các phương thức jQuery đặt trong sự kiện ready của tài liệu:
+
+$(document).ready(function() {
+  /* các phương thức jQuery đặt ở đây... */
+});
+Điều này là để ngăn chặn mã jQuery chạy trước khi tài liệu đã được tải xong (đã sẵn sàng).
+
+Điều này là một kỹ thuật để chờ đợi cho tài liệu (trang web) được tải về đầy đủ và sẵn sàng trước khi làm việc với nó. Kỹ thuật này cũng cho phép có mã JavaScript trước phần <body> của trang web, trong phần <head>. Có thể dùng phương thức ngắn hơn cho sự kiện tài liệu đã sẵn sàng
+$(function () {
+  /* các phương thức jQuery đặt ở đây... */
+});
+
+
+jQuery hoàn toàn thích hợp để đáp ứng với các sự kiện trong một trang HTML.
+Tất cả các hành động khác nhau của người dùng (visitor) mà trang web có thể đáp ứng (respond) được gọi là các sự kiện. Một sự kiện đại diện cho chính thời điểm khi một cái gì đó xảy ra
+Để gán sự kiện nhấp chuột vào tất cả các đoạn văn trên một trang
+$("p").click(function() {
+  // các hành động triển khai ở đây!!
+});
+______________________________________________________________________________________________________
+AJAX là viết tắt của JavaScript và XML không đồng bộ (Asynchronous JavaScript and XML)
+AJAX là một kỹ thuật để tạo ra các ứng dụng web tốt hơn, nhanh hơn và tương tác hơn
+với sự trợ giúp của XML, HTML, CSS và Java Script.
+
+Ajax sử dụng XHTML cho nội dung, CSS cho trình bày, cùng với Document Object Model và JavaScript để hiển thị nội dung động
+AJAX là một công nghệ trình duyệt web độc lập với phần mềm web server.
+
+1. Ajax - Action
+Một sự kiện client xảy ra.(một hàm JavaScript được gọi)
+Một đối tượng XMLHttpRequest được tạo ra.
+Đối tượng XMLHttpRequest được cấu hình.
+Đối tượng XMLHttpRequest thực hiện một yêu cầu không đồng bộ tới Webserver.
+Webserver trả về kết quả chứa tài liệu XML.
+Đối tượng XMLHttpRequest gọi hàm callback() và xử lý kết quả.
+HTML DOM được cập nhật
+
+Đối tượng XMLHttpRequest là chìa khóa của AJAX. 
+XMLHttpRequest (XHR) là một API có thể được sử dụng bởi JavaScript, JScript, VBScript và các ngôn ngữ kịch bản trình duyệt web khác để truyền và thao tác dữ liệu XML đến và từ máy chủ web bằng HTTP, thiết lập kênh kết nối độc lập giữa Client-Side của trang web và Phía máy chủ.
+Bên cạnh XML, XMLHttpRequest có thể được sử dụng để tìm nạp dữ liệu ở các định dạng khác, ví dụ: JSON hoặc văn bản thuần túy.
